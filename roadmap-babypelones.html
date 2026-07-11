@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de ruta — babypelones.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F1E6;
+    --paper:#FFFFFF;
+    --teal:#7FA9A6;
+    --teal-dark:#4C7674;
+    --navy:#1E2B39;
+    --pink:#E23F78;
+    --pink-soft:#FBE4ED;
+    --line:#E4DCC9;
+    --radius:22px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--navy);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Baloo 2',sans-serif;margin:0;color:var(--navy);}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 90px;}
+
+  /* Hero */
+  .hero{padding:56px 24px 20px;text-align:center;}
+  .eyebrow{
+    font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    font-size:12px;color:var(--teal-dark);margin-bottom:14px;
+  }
+  .hero h1{font-size:clamp(26px,4.2vw,40px);font-weight:800;line-height:1.1;}
+  .hero .lead{max-width:560px;margin:16px auto 0;color:#4A5A66;font-size:16px;}
+
+  /* Timeline strip (signature element) */
+  .strip{max-width:880px;margin:40px auto 0;padding:0 24px;}
+  .strip-bar{
+    display:flex;height:14px;border-radius:999px;overflow:hidden;
+    box-shadow:0 0 0 1px var(--line) inset;
+  }
+  .strip-bar .seg-1{flex:2.3;background:var(--teal);}
+  .strip-bar .seg-2{flex:4;background:var(--pink);}
+  .strip-labels{display:flex;justify-content:space-between;margin-top:10px;font-size:12.5px;font-weight:600;color:#5C6C77;}
+  .strip-labels span:nth-child(2){flex:none;}
+  .strip-mid{position:relative;height:0;}
+  .strip-dates{display:flex;font-size:12.5px;font-weight:700;color:var(--navy);margin-top:2px;}
+  .strip-dates .d1{flex:2.3;}
+  .strip-dates .d2{flex:4;text-align:right;}
+
+  /* Phase headers */
+  .phase-header{
+    display:flex;align-items:baseline;gap:12px;
+    margin:52px 0 22px;
+  }
+  .phase-header:first-of-type{margin-top:44px;}
+  .phase-tag{
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:20px;color:var(--navy);
+  }
+  .phase-range{
+    font-size:13px;font-weight:600;color:var(--teal-dark);
+    background:var(--pink-soft);color:var(--pink);
+    padding:4px 12px;border-radius:999px;
+  }
+  .phase-2 .phase-range{background:#EAF2F1;color:var(--teal-dark);}
+
+  /* Timeline */
+  .timeline{position:relative;padding-left:56px;}
+  .timeline::before{
+    content:"";position:absolute;left:23px;top:4px;bottom:4px;width:2px;background:var(--line);
+  }
+  .step{position:relative;margin-bottom:22px;}
+  .step-marker{
+    position:absolute;left:-56px;top:0;width:46px;height:46px;border-radius:50%;
+    background:var(--teal);color:#fff;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:19px;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px var(--cream);
+  }
+  .phase-2 .step-marker{background:var(--pink);}
+  .step-card{
+    background:var(--paper);border-radius:var(--radius);padding:20px 24px;border:1px solid var(--line);
+  }
+  .step-card h3{font-size:16.5px;margin-bottom:6px;}
+  .step-card p{margin:0;color:#4A5A66;font-size:14.5px;}
+  .step-num{
+    font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--teal-dark);margin-bottom:4px;
+  }
+  .phase-2 .step-num{color:var(--pink);}
+
+  .cta-block{
+    max-width:860px;margin:36px auto 0;padding:0 24px;
+    text-align:center;
+  }
+  .cta-card{
+    background:var(--navy);border-radius:26px;
+    padding:36px 28px;
+  }
+  .cta-card p{
+    color:#C9D3DA;font-size:14.5px;margin:0 0 18px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.08em;
+  }
+  .cta-button{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--pink);color:#fff;
+    padding:18px 34px;border-radius:999px;
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:19px;
+    text-decoration:none;
+    box-shadow:0 10px 24px rgba(226,63,120,.35);
+  }
+
+  footer.final{text-align:center;padding:30px 24px 8px;color:#5C6C77;font-size:14px;}
+
+  @media (max-width:640px){
+    .timeline{padding-left:44px;}
+    .step-marker{left:-44px;width:38px;height:38px;font-size:16px;}
+    .phase-header{flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:16px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Padia × Fundación Juegaterapia</div>
+  <h1>Hoja de ruta<br>babypelones.com</h1>
+  <p class="lead">Así vamos a trabajar entre julio y el lanzamiento: primero se construye la base, luego se activa todo lo demás. Nueve pasos, en dos fases.</p>
+</div>
+
+<div class="strip">
+  <div class="strip-bar"><div class="seg-1"></div><div class="seg-2"></div></div>
+  <div class="strip-dates"><span class="d1">15 jul</span><span class="d2">1 sep → lanzamiento</span></div>
+  <div class="strip-labels"><span>Fase 1 · Preparación</span><span>Fase 2 · Activación</span></div>
+</div>
+
+<div class="wrap">
+
+  <div class="phase-header phase-1">
+    <span class="phase-tag">Fase 1 — Preparación</span>
+    <span class="phase-range">15 julio → 1 septiembre</span>
+  </div>
+  <div class="timeline phase-1">
+    <div class="step">
+      <div class="step-marker">📋</div>
+      <div class="step-card">
+        <div class="step-num">Paso 1</div>
+        <h3>Onboarding</h3>
+        <p>Contrato firmado, factura abonada, accesos configurados y plan digital de la web cerrado. Es la base — sin esto no arranca nada.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">🧸</div>
+      <div class="step-card">
+        <div class="step-num">Paso 2</div>
+        <h3>Contenido de producto</h3>
+        <p>Recopilación de stock, fichas y nombres de cada Baby Pelón. Sin este contenido no se puede maquetar ni una sola ficha de producto.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">💻</div>
+      <div class="step-card">
+        <div class="step-num">Paso 3</div>
+        <h3>Construcción de la web</h3>
+        <p>Nuestro equipo desarrolla la tienda en Shopify durante estas semanas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-header phase-2">
+    <span class="phase-tag">Fase 2 — Activación</span>
+    <span class="phase-range">Desde el 1 de septiembre</span>
+  </div>
+  <div class="timeline phase-2">
+    <div class="step">
+      <div class="step-marker">🚚</div>
+      <div class="step-card">
+        <div class="step-num">Paso 4</div>
+        <h3>Terminar la web + arranca la logística</h3>
+        <p>Terminamos la creación de la web y comienza la conexión del almacén con la empresa logística Ánfora.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">🔌</div>
+      <div class="step-card">
+        <div class="step-num">Paso 5</div>
+        <h3>Conexión de plataformas</h3>
+        <p>Vinculamos la web con Meta, Google Analytics, Google Ads, TikTok y Klaviyo — incluida la migración de vuestra base de datos actual a Klaviyo.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">📣</div>
+      <div class="step-card">
+        <div class="step-num">Paso 6</div>
+        <h3>Estrategia de paid media y email</h3>
+        <p>Definimos el plan de campañas y arrancamos los flows de automatización de email marketing.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">🎬</div>
+      <div class="step-card">
+        <div class="step-num">Paso 7</div>
+        <h3>Petición de contenidos</h3>
+        <p>La producción es vuestra — nosotros os decimos exactamente qué necesitamos para anuncios y emails.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">📊</div>
+      <div class="step-card">
+        <div class="step-num">Paso 8</div>
+        <h3>Medición y dashboards</h3>
+        <p>Excels de datos y dashboards personalizados para seguir los resultados del proyecto.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-marker">🚀</div>
+      <div class="step-card">
+        <div class="step-num">Paso 9 · Lanzamiento</div>
+        <h3>Lanzamiento</h3>
+        <p>Entrega de la web completa + arranque de las campañas de paid media, con todo conectado y medido.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-block">
+  <div class="cta-card">
+    <p>Empezamos por aquí</p>
+    <a class="cta-button" href="./onboarding-babypelones.html" target="_blank" rel="noopener">📋 Ver el proceso de onboarding →</a>
+  </div>
+</div>
+
+<footer class="final">
+  Esta hoja de ruta es la guía de trabajo compartida — si algo se mueve de fecha, la actualizamos juntos.
+</footer>
+
+</body>
+</html>
